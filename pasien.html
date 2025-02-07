@@ -1,0 +1,588 @@
+<!doctype html>
+<!--
+* Tabler - Premium and Open Source dashboard template with responsive and high quality UI.
+* @version 1.0.0
+* @link https://tabler.io
+* Copyright 2018-2025 The Tabler Authors
+* Copyright 2018-2025 codecalm.net Paweł Kuna
+* Licensed under MIT (https://github.com/tabler/tabler/blob/master/LICENSE)
+-->
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+	<title>Profil</title>
+	<!-- CSS files -->
+<link href="./dist/css/tabler.min.css?1738096685" rel="stylesheet"/>
+	<link href="./dist/css/tabler-flags.min.css?1738096685" rel="stylesheet"/>
+	<link href="./dist/css/tabler-socials.min.css?1738096685" rel="stylesheet"/>
+	<link href="./dist/css/tabler-payments.min.css?1738096685" rel="stylesheet"/>
+	<link href="./dist/css/tabler-vendors.min.css?1738096685" rel="stylesheet"/>
+	<link href="./dist/css/tabler-marketing.min.css?1738096685" rel="stylesheet"/>
+<link href="./dist/css/demo.min.css?1738096685" rel="stylesheet"/>
+	<style>
+		@import url('https://rsms.me/inter/inter.css');
+	</style>
+</head>
+<body class=" layout-fluid">
+	<script src="./dist/js/demo-theme.min.js?1738096685"></script>
+	<div class="page">
+	<!-- Sidebar -->
+	<aside class="navbar navbar-vertical navbar-expand-lg" data-bs-theme="dark">
+		<div class="container-fluid">
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-menu" aria-controls="sidebar-menu" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="navbar-brand navbar-brand-autodark">
+				<a href=".">
+					<h1 class="mt-3">Dokter Panel</h1>
+				</a>
+			</div>
+			<div class="navbar-nav flex-row d-lg-none">
+				<div class="nav-item d-none d-lg-flex me-3">
+					<div class="btn-list">
+						<a href="https://github.com/tabler/tabler" class="btn btn-5" target="_blank" rel="noreferrer">
+							<!-- Download SVG icon from http://tabler.io/icons/icon/brand-github -->
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-2"><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>
+							Source code
+						</a>
+						<a href="https://github.com/sponsors/codecalm" class="btn btn-6" target="_blank" rel="noreferrer">
+							<!-- Download SVG icon from http://tabler.io/icons/icon/heart -->
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon text-pink icon-2"><path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" /></svg>
+							Sponsor
+						</a>
+					</div>
+				</div>
+				<div class="d-none d-lg-flex">
+					<a href="?theme=dark" class="nav-link px-0 hide-theme-dark" title="Enable dark mode" data-bs-toggle="tooltip"
+					data-bs-placement="bottom">
+						<!-- Download SVG icon from http://tabler.io/icons/icon/moon -->
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" /></svg>
+					</a>
+					<a href="?theme=light" class="nav-link px-0 hide-theme-light" title="Enable light mode" data-bs-toggle="tooltip"
+						data-bs-placement="bottom">
+						<!-- Download SVG icon from http://tabler.io/icons/icon/sun -->
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" /></svg>
+					</a>
+					<div class="nav-item dropdown d-none d-md-flex me-3">
+						<a href="#" class="nav-link px-0" data-bs-toggle="dropdown" tabindex="-1" aria-label="Show notifications">
+							<!-- Download SVG icon from http://tabler.io/icons/icon/bell -->
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M10 5a2 2 0 1 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" /><path d="M9 17v1a3 3 0 0 0 6 0v-1" /></svg>
+							<span class="badge bg-red"></span>
+							</a>
+							<div class="dropdown-menu dropdown-menu-arrow dropdown-menu-end dropdown-menu-card">
+								<div class="card">
+									<div class="card-header">
+									<h3 class="card-title">Last updates</h3>
+								</div>
+								<div class="list-group list-group-flush list-group-hoverable">
+									<div class="list-group-item">
+										<div class="row align-items-center">
+											<div class="col-auto"><span class="status-dot status-dot-animated bg-red d-block"></span></div>
+											<div class="col text-truncate">
+												<a href="#" class="text-body d-block">Example 1</a>
+												<div class="d-block text-secondary text-truncate mt-n1">
+													Change deprecated html tags to text decoration classes (#29604)
+												</div>
+											</div>
+											<div class="col-auto">
+												<a href="#" class="list-group-item-actions">
+								<!-- Download SVG icon from http://tabler.io/icons/icon/star -->
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon text-muted icon-2"><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" /></svg>
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="list-group-item">
+										<div class="row align-items-center">
+											<div class="col-auto"><span class="status-dot d-block"></span></div>
+											<div class="col text-truncate">
+												<a href="#" class="text-body d-block">Example 2</a>
+												<div class="d-block text-secondary text-truncate mt-n1">
+													justify-content:between ⇒ justify-content:space-between (#29734)
+												</div>
+											</div>
+											<div class="col-auto">
+												<a href="#" class="list-group-item-actions show">
+								<!-- Download SVG icon from http://tabler.io/icons/icon/star -->
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon text-yellow icon-2"><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" /></svg>
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="list-group-item">
+										<div class="row align-items-center">
+											<div class="col-auto"><span class="status-dot d-block"></span></div>
+											<div class="col text-truncate">
+												<a href="#" class="text-body d-block">Example 3</a>
+												<div class="d-block text-secondary text-truncate mt-n1">
+													Update change-version.js (#29736)
+												</div>
+											</div>
+											<div class="col-auto">
+												<a href="#" class="list-group-item-actions">
+								<!-- Download SVG icon from http://tabler.io/icons/icon/star -->
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon text-muted icon-2"><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" /></svg>
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="list-group-item">
+										<div class="row align-items-center">
+											<div class="col-auto"><span class="status-dot status-dot-animated bg-green d-block"></span></div>
+											<div class="col text-truncate">
+												<a href="#" class="text-body d-block">Example 4</a>
+												<div class="d-block text-secondary text-truncate mt-n1">
+													Regenerate package-lock.json (#29730)
+												</div>
+											</div>
+											<div class="col-auto">
+												<a href="#" class="list-group-item-actions">
+								<!-- Download SVG icon from http://tabler.io/icons/icon/star -->
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon text-muted icon-2"><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" /></svg>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="nav-item dropdown">
+					<a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown" aria-label="Open user menu">
+						<span class="avatar avatar-sm" style="background-image: url(./static/avatars/000m.jpg)"></span>
+						<div class="d-none d-xl-block ps-2">
+							<div>Paweł Kuna</div>
+							<div class="mt-1 small text-secondary">UI Designer</div>
+						</div>
+					</a>
+					<div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+						<a href="#" class="dropdown-item">Status</a>
+						<a href="./profile.html" class="dropdown-item">Profile</a>
+						<a href="#" class="dropdown-item">Feedback</a>
+						<div class="dropdown-divider"></div>
+						<a href="./settings.html" class="dropdown-item">Settings</a>
+						<a href="./sign-in.html" class="dropdown-item">Logout</a>
+					</div>
+				</div>
+			</div>
+			<div class="collapse navbar-collapse" id="sidebar-menu">
+				<ul class="navbar-nav pt-lg-3">
+					<li class="nav-item">
+						<a class="nav-link" href="index.html" >
+							<span class="nav-link-icon d-md-none d-lg-inline-block">
+								<!-- Download SVG icon from http://tabler.io/icons/icon/home -->
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M5 12l-2 0l9 -9l9 9l-2 0" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
+							</span>
+							<span class="nav-link-title">
+								Dashboard
+							</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="pemeriksaan.html">
+							<span class="nav-link-icon d-md-none d-lg-inline-block">
+								<!-- Download SVG icon from http://tabler.io/icons/icon/package -->
+								<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-notes"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 3m0 2a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2z" /><path d="M9 7l6 0" /><path d="M9 11l6 0" /><path d="M9 15l4 0" /></svg>
+							</span>
+							<span class="nav-link-title">
+								Pemeriksaan
+							</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="pasien.html" >
+							<span class="nav-link-icon d-md-none d-lg-inline-block">
+								<!-- Download SVG icon from http://tabler.io/icons/icon/checkbox -->
+								<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-wheelchair"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 16m-5 0a5 5 0 1 0 10 0a5 5 0 1 0 -10 0" /><path d="M19 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M19 17a3 3 0 0 0 -3 -3h-3.4" /><path d="M3 3h1a2 2 0 0 1 2 2v6" /><path d="M6 8h11" /><path d="M15 8v6" /></svg>
+							</span>
+							<span class="nav-link-title">
+								Pasien
+							</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="profil.html" >
+							<span class="nav-link-icon d-md-none d-lg-inline-block">
+								<!-- Download SVG icon from http://tabler.io/icons/icon/checkbox -->
+								<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></svg>
+							</span>
+							<span class="nav-link-title">
+								Profil
+							</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a id="logoutButton" class="nav-link" href="./logout" data-bs-toggle="modal" data-bs-target="#exampleModal">
+							<span class="nav-link-icon d-md-none d-lg-inline-block">
+								<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-logout-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 8v-2a2 2 0 0 1 2 -2h7a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-2" /><path d="M15 12h-12l3 -3" /><path d="M6 15l-3 -3" /></svg>
+							</span>
+							<span class="nav-link-title">
+								Logout
+							</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</aside>
+	<div class="modal modal-blur fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog modal-sm modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Konfirmasi Logout</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body text-center py-4">
+					<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-info-hexagon">
+					<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+					<path d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z"/>
+					<path d="M12 9h.01"/>
+					<path d="M11 12h1v4h1"/>
+					</svg>
+					<h3 class="mt-2">Apakah Anda Ingin Keluar?</h3>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary w-100" data-bs-dismiss="modal">
+						Cancel
+					</button>
+					<a href="/" class="btn btn-danger w-100">
+						Yes
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+    <div class="page-wrapper">
+        <!-- Page header -->
+        <div class="page-header d-print-none">
+            <div class="container-xl">
+                <div class="row g-2 align-items-center">
+                    <div class="col">
+                        <!-- Page pre-title -->
+                        <div class="page-pretitle">Halaman</div>
+                        <h2 class="page-title">Pasien</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<!-- Page body -->
+		<div class="page-body">
+			<div class="container-xl">
+				<div class="col-12 mb-3">
+					<div class="row row-cards">
+						<div class="col-sm-6 col-lg-12">
+							<div class="card card-sm">
+								<div class="card-header">
+									<h3 class="card-title">History Pasien</h3>
+								</div>
+								<div class="card-body border-bottom py-3">
+									<div class="d-flex">
+										<div class="text-secondary">
+											Show
+											<div class="mx-2 d-inline-block">
+												<input type="text" class="form-control form-control-sm" value="8" size="3" aria-label="Invoices count">
+											</div>
+											entries
+										</div>
+										<div class="ms-auto text-secondary">
+											Search:
+											<div class="ms-2 d-inline-block">
+												<input type="text" class="form-control form-control-sm" aria-label="Search invoice">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="table-responsive">
+									<table class="table table-vcenter table-nowrap">
+										<thead>
+											<tr>
+												<th></th>
+												<th class="">No. 
+													<!-- Download SVG icon from http://tabler.io/icons/icon/chevron-up -->
+													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-sm icon-thick icon-2"><path d="M6 15l6 -6l6 6" /></svg>
+												</th>
+												<th>Nama Pasien</th>
+												<th>Status Pasien</th>
+												<th></th>
+												<th class=""></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td></td>
+												<td>K-04</td>
+												<td class="text-secondary">Budiono Siregar</td>
+												<td class="text-secondary">Selesai</td>
+												<td>
+													<a href="#" class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#modal-report">Detail</a>
+												</td>  
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="card-footer d-flex align-items-center">
+									<p class="m-0 text-secondary">Showing <span>1</span> to <span>8</span> of <span>16</span> entries</p>
+									<ul class="pagination m-0 ms-auto">
+										<li class="page-item disabled">
+											<a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+											<!-- Download SVG icon from http://tabler.io/icons/icon/chevron-left -->
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M15 6l-6 6l6 6" /></svg>
+										prev
+											</a>
+										</li>
+										<li class="page-item"><a class="page-link" href="#">1</a></li>
+										<li class="page-item active"><a class="page-link" href="#">2</a></li>
+										<li class="page-item"><a class="page-link" href="#">3</a></li>
+										<li class="page-item"><a class="page-link" href="#">4</a></li>
+										<li class="page-item"><a class="page-link" href="#">5</a></li>
+										<li class="page-item">
+											<a class="page-link" href="#">
+													next 
+											<!-- Download SVG icon from http://tabler.io/icons/icon/chevron-right -->
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M9 6l6 6l-6 6" /></svg>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Detail data pasien -->
+		<div class="modal modal-blur fade" id="modal-report" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Informasi Data Pasien</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div class="row">
+							<div class="card mb-4">
+								<div class="card-header">
+									<h3 class="card-title">Informasi Pribadi</h3>
+								</div>
+								<div class="card-body">
+									<div class="mb-3">
+										<label class="form-label">Nama</label>
+										<input type="text" class="form-control" name="example-password-input" placeholder="Budiono Siregar" disabled />
+									</div>
+									<div class="mb-3">
+										<label class="form-label">NIK</label>
+										<input type="text" class="form-control" name="example-password-input" placeholder="3212615205250101" disabled />
+									</div>
+									<div class="mb-3">
+										<label class="form-label">Alamat</label>
+										<input type="text" class="form-control" name="example-password-input" placeholder="Jl. Soedirman, Kota Tegal" disabled />
+									</div>
+									<div class="mb-3">
+										<label class="form-label">Jenis Kelamin</label>
+										<input type="text" class="form-control" name="example-password-input" placeholder="Laki laki" disabled />
+									</div>
+									<div class="mb-3">
+										<label class="form-label">Agama</label>
+										<input type="text" class="form-control" name="example-password-input" placeholder="Islam" disabled />
+									</div>
+									<div class="mb-3">
+										<label class="form-label">Pekerjaan</label>
+										<input type="text" class="form-control" name="example-password-input" placeholder="Nahkoda" disabled />
+									</div>
+									<div class="mb-3">
+										<label class="form-label">Golongan Darah</label>
+										<input type="text" class="form-control" name="example-password-input" placeholder="AB" disabled />
+									</div>
+								</div>
+							</div>							  
+						</div>
+						<div class="row">
+							<div class="card">
+								<div class="card-header">
+									<h3 class="card-title">Data Pemeriksaan</h3>
+								</div>
+								<div class="card-body">
+									<div class="mb-3">
+										<label class="form-label">Lab Type</label>
+										<select id="labType" class="form-select" disabled>
+											<option value="">Pilih Lab Type</option>
+											<option value="klinik">Laboratorium Klinik</option>
+											<option value="kesmas">Laboratorium Kesehatan Masyarakat</option>
+										</select>
+									</div>
+									<div class="mb-3" id="inspectionDiv" style="display: none;">
+										<label class="form-label">Inspection</label>
+										<select id="inspection" class="form-select" disabled>
+											<option value="">Pilih Inspection</option>
+										</select>
+									</div>
+									<div id="textareaContainer" class="mt-3" style="display: none;"></div>
+								</div>
+							</div>						  
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Footer -->
+        <footer class="footer footer-transparent d-print-none">
+            <div class="container-xl">
+                <div class="row text-center align-items-center flex-row-reverse">
+                    <div class="col-lg-auto ms-lg-auto">
+                        <ul class="list-inline list-inline-dots mb-0">
+                            <li class="list-inline-item"><a href="https://tabler.io/docs" target="_blank" class="link-secondary" rel="noopener">Documentation</a></li>
+                            <li class="list-inline-item"><a href="./license.html" class="link-secondary">License</a></li>
+                            <li class="list-inline-item"><a href="https://github.com/tabler/tabler" target="_blank" class="link-secondary" rel="noopener">Source code</a></li>
+                            <li class="list-inline-item">
+                                <a href="https://github.com/sponsors/codecalm" target="_blank" class="link-secondary" rel="noopener">
+                                    <!-- Download SVG icon from http://tabler.io/icons/icon/heart -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon text-pink icon-inline icon-4"><path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" /></svg>
+                                    Sponsor
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-lg-auto mt-3 mt-lg-0">
+                        <ul class="list-inline list-inline-dots mb-0">
+                            <li class="list-inline-item">
+                                Copyright &copy; 2025
+                                <a href="." class="link-secondary">Tabler</a>.
+                                All rights reserved.
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="./changelog.html" class="link-secondary" rel="noopener">
+                                    v1.0.0
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+	<!-- Script detail pasien -->
+	<script>
+		function setLabType(value) {
+			let labTypeSelect = document.getElementById("labType");
+			labTypeSelect.value = value; // Set nilai Lab Type
+			updateInspectionOptions(value); // Perbarui pilihan Inspection
+		}
+	
+		function updateInspectionOptions(labType) {
+			let inspectionSelect = document.getElementById("inspection");
+			let inspectionDiv = document.getElementById("inspectionDiv");
+			let textareaContainer = document.getElementById("textareaContainer");
+	
+			inspectionSelect.innerHTML = '<option value="">Pilih Inspection</option>';
+			textareaContainer.innerHTML = "";
+			textareaContainer.style.display = "none";
+	
+			if (labType === "klinik") {
+				inspectionSelect.innerHTML += '<option value="hematologi">Hematologi</option>';
+				inspectionSelect.innerHTML += '<option value="fungsi_hati">Fungsi Hati</option>';
+				inspectionDiv.style.display = "block";
+			} else if (labType === "kesmas") {
+				inspectionSelect.innerHTML += '<option value="air_minum">Air Minum</option>';
+				inspectionSelect.innerHTML += '<option value="air_limbah">Air Limbah</option>';
+				inspectionSelect.innerHTML += '<option value="makanan_minuman">Makanan dan Minuman</option>';
+				inspectionDiv.style.display = "block";
+			} else {
+				inspectionDiv.style.display = "none";
+			}
+		}
+	
+		function setInspection(value) {
+			let inspectionSelect = document.getElementById("inspection");
+			inspectionSelect.value = value; // Set nilai Inspection
+			generateInspectionDetails(value); // Generate hasil pemeriksaan
+		}
+	
+		function generateInspectionDetails(inspection) {
+			let textareaContainer = document.getElementById("textareaContainer");
+			textareaContainer.innerHTML = "";
+	
+			let categories = {
+				"hematologi": {
+					"Pemeriksaan Darah": {
+						items: ["Darah Rutin", "Laju Endap Darah"],
+						contoh: ["Nilai Hemoglobin: 13.5 g/dL", "Laju Endap Darah: 10 mm/jam"]
+					}
+				},
+				"fungsi_hati": {
+					"Pemeriksaan Hati": {
+						items: ["Bilirubin Total", "Bilirubin Direc"],
+						contoh: ["Bilirubin Total: 1.2 mg/dL", "Bilirubin Direc: 0.3 mg/dL"]
+					}
+				},
+				"air_minum": {
+					"Fisika": {
+						items: ["Bau", "TDS"],
+						contoh: ["Bau: Normal", "TDS: 150 mg/L"]
+					}
+				},
+				"air_limbah": {
+					"Kimia": {
+						items: ["PH", "COD"],
+						contoh: ["PH: 7.1", "COD: 50 mg/L"]
+					}
+				},
+				"makanan_minuman": {
+					"Bakteri": {
+						items: ["E.Coli", "MPN Coliform"],
+						contoh: ["E.Coli: Tidak Terdeteksi", "MPN Coliform: 3 per 100 mL"]
+					}
+				}
+			};
+	
+			if (categories[inspection]) {
+				Object.keys(categories[inspection]).forEach(category => {
+					let categoryTitle = document.createElement("h5");
+					categoryTitle.innerText = category;
+					textareaContainer.appendChild(categoryTitle);
+	
+					let categoryData = categories[inspection][category];
+	
+					categoryData.items.forEach((item, index) => {
+						let div = document.createElement("div");
+						div.classList.add("mb-3");
+	
+						let label = document.createElement("label");
+						label.classList.add("form-label");
+						label.innerText = item;
+	
+						let textarea = document.createElement("textarea");
+						textarea.classList.add("form-control");
+						textarea.id = item.replace(/\s+/g, '_').toLowerCase();
+						textarea.rows = 2;
+						textarea.readOnly = true;
+						textarea.value = categoryData.contoh[index]; // Mengisi textarea dengan contoh hasil
+	
+						div.appendChild(label);
+						div.appendChild(textarea);
+						textareaContainer.appendChild(div);
+					});
+				});
+	
+				textareaContainer.style.display = "block";
+			} else {
+				textareaContainer.style.display = "none";
+			}
+		}
+	
+		// Contoh cara mengisi data pasien (Lab Type, Inspection, dan hasil)
+		setLabType("klinik"); // Contoh: Set Lab Type ke "klinik"
+		setInspection("hematologi"); // Contoh: Set Inspection ke "hematologi"
+	</script>
+    <!-- Libs JS -->
+	<script src="./dist/libs/apexcharts/dist/apexcharts.min.js?1738096685" defer></script>
+	<script src="./dist/libs/jsvectormap/dist/jsvectormap.min.js?1738096685" defer></script>
+	<script src="./dist/libs/jsvectormap/dist/maps/world.js?1738096685" defer></script>
+	<script src="./dist/libs/jsvectormap/dist/maps/world-merc.js?1738096685" defer></script>
+	<!-- Tabler Core -->
+	<script src="./dist/js/tabler.min.js?1738096685" defer></script>
+	<script src="./dist/js/demo.min.js?1738096685" defer></script>
+</body>
+</html>
